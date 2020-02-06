@@ -1,0 +1,152 @@
+@import "../../styles/abstract/mixins";
+@import "../../styles/abstract/variables";
+
+.auth {
+  height: 100%;
+  position: relative;
+  display: flex;
+  background: white;
+  justify-content: center;
+  align-items: center;
+
+  @include for-size(phone-only) {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    overflow: auto;
+  }
+
+  h3 {
+    color: white;
+    letter-spacing: 0.1rem;
+    font-size: 2.6rem;
+    height: 7rem;
+    background-color: $highlight-green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+
+  h6 {
+    color: #ccc;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    margin-top: 2rem;
+  }
+
+  span {
+    color: $highlight-green;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    padding: 0 4.5rem;
+    margin-top: 2rem;
+  }
+
+  .error-msg {
+    font-size: 1rem;
+    color: $highlight-error;
+    margin-left: 1rem;
+  }
+
+  &__form-container {
+    width: 35rem;
+    height: 45rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px;
+
+    @include for-size(phone-only) {
+      width: 35rem;
+      padding: 0 5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__register-form-container {
+    width: 35rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px;
+
+    @include for-size(phone-only) {
+      width: 35rem;
+      padding: 0 5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__form-sub-container {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sub-text {
+    color: $highlight-primary;
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  &__input {
+    height: 4rem;
+    background-color: transparent;
+    color: $highlight-primary;
+    padding: 0 1rem;
+    background-color: $bg-3;
+    border-radius: 2.4rem;
+  }
+
+  &__btn {
+    height: 4rem;
+    width: 100%;
+    background-color: $highlight-green;
+    color: white !important;
+    border: none;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border-radius: 2.4rem;
+
+    &:hover {
+      background-color: $highlight-green !important;
+    }
+  }
+
+  &__forgot-password {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-top: 1rem;
+    color: white;
+    margin-right: 1rem;
+
+    &:hover {
+      color: $highlight-primary;
+      transition: 0.2s;
+    }
+  }
+}

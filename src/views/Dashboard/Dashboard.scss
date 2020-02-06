@@ -1,0 +1,60 @@
+@import "../../styles/abstract/variables";
+
+.dashboard {
+  padding-top: 8rem;
+
+  .part-1 {
+    margin-bottom: 3rem;
+
+    .input-area {
+      .search-input {
+        border-radius: 2.4rem;
+      }
+    }
+  }
+
+  .booked {
+    color: $highlight-green;
+  }
+
+  .discoverPending {
+    color: #52a7dc;
+  }
+
+  .part-2 {
+    display: flex;
+    margin-bottom: 5rem;
+    .select-area {
+      width: 25rem;
+
+      label {
+          font-size: 1.2rem;
+          color: #ccc;
+          margin-left: 1rem;
+      }
+
+      .react-date-picker {
+        width: 100%;
+      }
+
+      .react-date-picker__wrapper {
+        display: flex;
+        border: thin solid #ccc;
+        border-radius: 0.4rem;
+        width: 100%;
+        color: black;
+        height: 4rem;
+        padding: 0 1rem;
+        border-radius: 2.4rem;
+      }
+
+      .react-date-picker__inputGroup__input {
+        color: black;
+      }
+
+      .react-date-picker__button {
+        outline: none;
+      }
+    }
+  }
+}

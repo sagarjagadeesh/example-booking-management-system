@@ -1,0 +1,148 @@
+@import "../../styles/abstract/variables";
+@import "../abstract/mixins";
+
+body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 3.2rem;
+  }
+  
+  h2 {
+    color: white;
+    font-size: 2.8rem;
+  }
+  
+  h3 {
+    color: white;
+    font-size: 2.4rem;
+  }
+  
+  h4 {
+    color: $highlight-primary;
+    font-size: 2rem;
+  }
+  
+  h5 {
+    color: $highlight-primary;
+    font-size: 1.6rem;
+  }
+  
+  h6 {
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  a {
+    color: $highlight-primary;
+  
+    &:hover {
+      color: $highlight-primary;
+      text-decoration: none;
+    }
+  }
+  
+  .container {
+    max-width: 80%;
+    min-width: 80%;
+  
+    @include for-size(phone-only) {
+      max-width: 95%;
+      min-width: 95%;
+    }
+  
+    &::before {
+      display: none;
+    }
+    &::before {
+      display: none;
+    }
+  
+    &::after {
+      display: none;
+    }
+  }
+
+.main-div {
+    height: 100%;
+    background-color: $bg-1;
+}
+
+.styled-table {
+  thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  tbody {
+    display: block;
+    max-height: 35rem;
+    min-height: 35rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    @include for-size(phone-only) {
+      max-height: 35rem;
+      min-height: 35rem;
+      overflow: scroll;
+      min-width: 65rem;
+      max-width: 65rem;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: transparent; /* or add it to the track */
+    }
+
+    /* Add a thumb */
+    &::-webkit-scrollbar-thumb {
+      background: var(--text-secondary);
+      opacity: 0.6;
+    }
+  }
+
+  td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-top: 0rem solid !important;
+    font-size: 1.4rem;
+    color: $highlight-primary;
+  }
+
+  /*Use the following to make sure cols align correctly*/
+  table,
+  tr,
+  th,
+  td {
+    border: 0.1rem solid --bg-3;
+    border-collapse: collapse;
+  }
+
+  .table > thead > tr > th {
+    vertical-align: bottom;
+    border: 0.1rem solid $bg-3 !important;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: $highlight-primary;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 5rem;
+  }
+
+  .th-width-10 {
+    width: 10rem;
+  }
+
+  .td-width-9-3 {
+    width: 9.3rem;
+  }
+}

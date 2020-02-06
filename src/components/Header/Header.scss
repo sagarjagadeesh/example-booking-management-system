@@ -1,0 +1,70 @@
+@import "../../styles/abstract/variables";
+
+.header {
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  background-color: $highlight-green;
+  box-shadow: -1px 0 5px $bg-3;
+  position: fixed;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header-contents {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+
+  .user-name-cont {
+    i {
+      color: white;
+    }
+    span {
+      font-size: 1.4rem;
+      color: white;
+      text-transform: uppercase;
+      margin-left: 1rem;
+    }
+  }
+
+  .logout-cont {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    i {
+      height: 3rem;
+      width: 3rem;
+      border: 0.15rem solid white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      &:hover {
+        background-color: white;
+        color: black;
+        height: 3rem;
+        width: 3rem;
+        border: 0.15rem solid white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    span {
+      font-size: 1.4rem;
+      color: white;
+      text-transform: uppercase;
+      margin-left: 0.5rem;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}

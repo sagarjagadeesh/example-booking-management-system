@@ -1,0 +1,32 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html, body, #root, .body--dark, .body--light {
+    height: 100%;
+}
+
+html {
+    // This defines what 1rem is
+    //font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    font-size: .695vw;
+    font-family: 'Poppins', sans-serif !important;
+
+    @include for-size(phone-only) {
+        font-size: 2.6vw;
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+
+
+
+
